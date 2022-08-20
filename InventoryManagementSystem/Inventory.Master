@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Inventory.master.cs" Inherits="InventoryManagementSystem.Inventory" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Style/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Table ID="Table1" runat="server" Width="100%" >
+                <asp:TableHeaderRow Height="80px" Font-Size="Larger">
+                    <asp:TableHeaderCell ColumnSpan="2" Font-Size="XX-Large" Font-Italic="true" CssClass="headerBottomBorder">
+                        <div style="text-align:right;font-size:20px;">
+                        <asp:Label ID="lblUserName" runat="server" Text="" ForeColor="Blue"></asp:Label>
+                        &nbsp;
+                        <asp:Button ID="btnLogout" Font-Bold="true" ForeColor="DarkRed" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+                        </div>
+                        <a href="../Home/home.aspx" style="color:green;">Inventory Management system</a>
+                    </asp:TableHeaderCell>
+                </asp:TableHeaderRow>
+                <asp:TableRow>
+                    <asp:TableCell HorizontalAlign="Left" VerticalAlign="Top" Width="140px">
+                        <ul style="color:seagreen;">
+                            <li>
+                                <asp:LinkButton ID="lbAdminMenu" OnClick="lbAdminMenu_Click" runat="server">Admin</asp:LinkButton>
+                                <asp:BulletedList ID="blAdminMenu" Visible="false" DisplayMode="HyperLink" runat="server">
+                                    <asp:ListItem Value="./Users/users.aspx">Users</asp:ListItem>
+                                    <asp:ListItem Value="./Products/products.aspx">Products</asp:ListItem>
+                                    <asp:ListItem Value="./Suppliers/suppliers.aspx">Suppliers</asp:ListItem>
+                                </asp:BulletedList>
+                            </li>
+                            <li><a href="../Purchase/purchase.aspx">Purchase</a></li>
+                            <li><a href="../Sales/sales.aspx">Sales</a></li>
+                        </ul>
+                    </asp:TableCell>
+                    <asp:TableCell Height="420px">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        &nbsp;
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableFooterRow>
+                    <asp:TableCell ColumnSpan="2" BackColor="DarkSeaGreen" Font-Size="Larger" Font-Bold="true" Height="50px">
+                        CopyRight@Rohit
+                    </asp:TableCell>
+                </asp:TableFooterRow>
+            </asp:Table>
+            
+            
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿body {
+    text-align:center
+}
+a{
+    text-decoration:none;
+    color:seagreen;
+}
+#header{
+    float:right
+}
+#loginHeader{
+    color:green;
+}
+#loginFooter {
+    background-color: darkseagreen;
+    padding:1px;
+}
+#loginContent{
+    height:350px;
+}
+.gridview1 table tbody tr:hover {
+    background-color: ThreeDLightShadow;
+    cursor: pointer;
+}
+.hideGridColumn {
+    display: none;
+}
+.headerBottomBorder{
+    border-bottom:5px solid darkgreen;
+}
